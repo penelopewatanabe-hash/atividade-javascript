@@ -2,7 +2,9 @@ async function buscarUsuario(id) {
     try {
         console.log("Buscando usuário na API.....");
 
-        const resposta = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+        const resposta = await fetch(
+            `https://jsonplaceholder.typicode.com/users/${id}`
+        );
 
         if (!resposta.ok) {
             throw new Error(`Erro http: ${resposta.status}`);

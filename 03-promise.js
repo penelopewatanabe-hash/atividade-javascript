@@ -1,13 +1,13 @@
-function prepararPedido(){
-    return new Promise((resolve)=>{
-        console.log("Preparando pedido ......");
+function prepararPedido() {
+    return new Promise((resolve) => {
+        console.log("Preparando pedido......");
 
-        setTimeout(()=>{
-            resolve("Hambuger pronto!");
-        },3000);
-    })
+        setTimeout(() => {
+            resolve("Hambúrguer pronto!");
+        }, 3000);
+    });
 }
 
-prepararPedido().then((resultado)=>{
-    console.log(resultado)
-})
+prepararPedido().then((resultado) => {
+    console.log(resultado);
+});

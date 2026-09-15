@@ -2,7 +2,11 @@ function fazerLogin(email, senha) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (email === "admin@gmail.com" && senha === "1234") {
-                resolve({ id: 1, nome: "Administrador", email: email });
+                resolve({
+                    id: 1,
+                    nome: "Administrador",
+                    email: email
+                });
             } else {
                 reject(new Error("E-mail ou senha incorretos"));
             }
@@ -13,7 +17,9 @@ function fazerLogin(email, senha) {
 async function entrar() {
     try {
         console.log("Realizando login....");
+
         const usuario = await fazerLogin("admin@gmail.com", "1234");
+
         console.log("Login realizado com sucesso");
         console.log("Bem-vindo,", usuario.nome);
     } catch (error) {

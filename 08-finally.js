@@ -1,27 +1,28 @@
-function consultaServidor(disponivel){
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            if(disponivel){
+```javascript
+function consultaServidor(disponivel) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (disponivel) {
                 resolve("Dados recebidos.");
-            }else{
-                reject("Servidor indisponivel");
+            } else {
+                reject("Servidor indisponível");
             }
-        },1000)
-    })
+        }, 1000);
+    });
 }
-
 
 async function executar() {
     console.log("Carregando...");
+
     try {
         const resultado = await consultaServidor(true);
-        console.log(resultado)
+        console.log(resultado);
     } catch (error) {
-        console.log("Erro:", error.message)
-    } finally{
+        console.log("Erro:", error.message);
+    } finally {
         console.log("Carregamento finalizado");
     }
 }
 
-
 executar();
+```
